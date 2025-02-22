@@ -5,112 +5,121 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Alt School Profile</title>
+	<!-- Linking the CSS file -->
+	<link rel="stylesheet" href="./styles/assignment1.css" />
 </head>
 
-<body>
-	<h2 id="top">Alt School Profile</h2>
-	<!-- Basic Info -->
-	<section>
-		<i>
-			<h4>Basic Info</h4>
-		</i>
-		<p><strong>Name</strong>: Abiodun Sabitu</p>
-		<p>
-			<strong>Email</strong>:
-			<a href="mailto:abiodun.sabitu@outlook.com">abiodun.sabitu@outlook.com</a>
-		</p>
-		<p><strong>Student ID</strong>: ALT/SOE/024/2398</p>
-		<p><strong>School</strong>: School of Engineering (SOE)</p>
-		<p><strong>Track</strong>: Backend Engineering</p>
-		<p><strong>Learning Circle</strong>: Circle 39</p>
-		<p><strong>Monica</strong>: Humanity Stack</p>
-	</section>
-	<!-- Other Info -->
-	<section>
-		<i>
-			<h4>Other Info</h4>
-		</i>
-		<p>
-		<details open name="req">
-			<summary>Biography</summary>
-			<p>
-				A growing Frontend Engineer experienced in building scalable web
-				solutions using React.js, Next.js, Astro.js, and Node.js. <br />
-				With a diverse background in software engineering, customer
-				experience management, and banking operations, <br />I develop
-				user-focused solutions that seamlessly align with business goals,
-				combining modern UIs and efficient backends. <br />
-			<p>
-				Open to exploring new opportunities that focus on innovation and
-				growth in web technologies. <br />
-				I'm Eager to collaborate on frontend or full-stack development
-				projects that prioritize customer-centric solutions. <br />Let's
-				connect and explore how we can build impactful digital experiences
-				together.
-			</p>
-			</p>
-		</details>
-		</p>
-		<p>
-		<details name="req">
-			<summary>Why I Joined AltSchool Africa</summary>
-			<p>
-				Having honed skills in frontend engineering through some level of experience with technologies <br>like
-				React.js, Next.js, Astro.js, and Node.js,
-				I recognized the importance of building a solid foundation <br> in backend engineering to become a well-rounded
-				software engineer.
-			</p>
-			<p>
-				AltSchool Africa's structured curriculum, industry-focused training, and vibrant learning community
-				<br> provide an ideal platform to deepen my technical expertise in backend development.
-				<br>The school’s emphasis on hands-on projects and mentorship aligns perfectly with my goal of mastering <br>
-				scalable and efficient backend systems that complement modern UI solutions.
-			</p>
-			<p>
+<body id="top">
+	<!-- Stylish Navbar -->
+	<nav class="navbar">
+		<div class="logo">Alt School Africa</div>
 
-				AltSchool Africa represents more than a learning environment; it’s a gateway to a thriving tech <br>
-				ecosystem where innovation meets impact. With its reputation for equipping students with real-world <br>
-				skills, I joined to bridge the gap between frontend development and backend engineering, <br>
-				ensuring I can deliver seamless full-stack solutions.
-				<br>The program's tailored approach to learning offers the flexibility and rigor needed to achieve <br>
-				excellence in backend engineering while maintaining a learner-centric environment.
-				<!-- Fragment ID Feature -->
-			<p><strong><a href="#top">View Top</a></strong>
-		</details>
-		</p>
-		<p>
-		<details name="req">
-			<summary>My Goals for the School of Engineering</summary>
-			<p>
-				Goals for the School of Engineering
-				My primary goal at the School of Engineering is to master backend technologies that enable
-				<br>me to build robust,
+		<!-- Hamburger Menu Toggle (Checkbox) -->
+		<input type="checkbox" id="menuToggle" />
+		<label for="menuToggle" class="menu-icon">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
 
-				scalable, and secure web applications. This includes gaining a deeper understanding of databases, APIs, <br>
-				and server-side architectures. By the end of the program, I aim to create end-to-end solutions that <br>
-				provide seamless integration between frontend interfaces and backend systems, ensuring a superior user
-				experience
-			</p>
-			<p>
-				I also aspire to strengthen my problem-solving abilities by working on collaborative projects that simulate <br>
-				real-world challenges. Engaging in these projects will help me develop a portfolio of impactful solutions that
-				<br>
-				showcase my backend engineering skills. Furthermore, I intend to explore opportunities for mentorship and <br>
-				networking within AltSchool’s ecosystem to foster meaningful connections that can propel my career forward.
-			</p>
-			Lastly, my long-term goal is to contribute to the tech community by sharing knowledge and collaborating on
-			initiatives <br>
-			that drive innovation and inclusivity in the software development industry. With the skills and experiences gained
-			from <br>
-			the School of Engineering, I aim to transition into full-stack roles, where I can leverage both frontend and
-			backend <br>
-			expertise to deliver impactful digital experiences that align with business objectives.
-			<!-- Fragment ID Feature -->
-			<p><strong><a href="#top">View Top</a></strong>
-		</details>
-		</p>
-		</p>
-	</section>
+		<!--  Navigation Links -->
+		<ul class="nav-links">
+			<li><a href="#assignment1" onclick="document.getElementById('menuToggle').checked = false;">Assignment 1</a></li>
+			<li><a href="#assignment2" onclick="document.getElementById('menuToggle').checked = false;">Assignment 2</a></li>
+			<li><a href="#assignment3" onclick="document.getElementById('menuToggle').checked = false;">Assignment 3</a></li>
+		</ul>
+
+		<!-- Invisible overlay to close the menu -->
+		<label for="menuToggle" class="overlay"></label>
+	</nav>
+	<main>
+		<h2>My Alt School Profile</h2>
+
+		<!-- Basic Info Section -->
+		<section>
+			<i>
+				<h4>Basic Info</h4>
+			</i>
+			<p><strong>Name</strong>: Abiodun Sabitu</p>
+			<p><strong>Email</strong>: <a href="mailto:abiodun.sabitu@outlook.com">abiodun.sabitu@outlook.com</a></p>
+			<p><strong>Student ID</strong>: ALT/SOE/024/2398</p>
+			<p><strong>School</strong>: School of Engineering (SOE)</p>
+			<p><strong>Track</strong>: Backend Engineering</p>
+			<p><strong>Learning Circle</strong>: Circle 39</p>
+			<p><strong>Monica</strong>: Humanity Stack</p>
+		</section>
+
+		<!-- 🔍 Other Info Section -->
+		<section>
+			<i>
+				<h4>Other Info</h4>
+			</i>
+			<details open name="req">
+				<summary>Biography</summary>
+				<p>
+					I'm a dynamic Frontend Engineer experienced in building scalable web solutions using React.js, Next.js,
+					Astro.js, and Node.js.
+				</p>
+				<p>
+					With a diverse background in software engineering, customer experience management, and banking operations, I
+					develop user-focused solutions that align with business goals while combining modern UIs and efficient
+					backends.
+				</p>
+				<p>
+					Open to exploring new opportunities focused on innovation and growth in web technologies.
+				</p>
+			</details>
+
+			<details name="req">
+				<summary>Why I Joined AltSchool Africa</summary>
+				<p>
+					Having honed skills in frontend engineering with technologies like React.js, Next.js, Astro.js, and Node.js,
+					I recognized the importance of building a solid foundation in backend engineering to become a well-rounded
+					software engineer.
+				</p>
+				<p>
+					AltSchool Africa's structured curriculum, industry-focused training, and vibrant learning community provide an
+					ideal platform to deepen my technical expertise.
+				</p>
+			</details>
+
+			<details name="req">
+				<summary>My Goals for the School of Engineering</summary>
+				<p>
+					My primary goal is to master backend technologies to build robust, scalable, and secure web applications.
+				</p>
+				<p>
+					I also aim to strengthen my problem-solving abilities by working on collaborative projects simulating
+					real-world
+					challenges.
+				</p>
+			</details>
+		</section>
+
+		<!-- Assignments Section -->
+		<section id="assignment1">
+			<h2>Assignment 1</h2>
+			<p>Details about Assignment 1 go here...</p>
+		</section>
+
+		<section id="assignment2">
+			<h2>Assignment 2</h2>
+			<p>Details about Assignment 2 go here...</p>
+		</section>
+
+		<section id="assignment3">
+			<h2>Assignment 3</h2>
+			<p>Details about Assignment 3 go here...</p>
+		</section>
+
+		<!--  Back to Top Button -->
+		<div class="btn_wrapper">
+			<a href="#top" id="backToTop">
+				<img src="./assets/back_to-top.png" alt="Back to Top" class="back-to-top-img" />
+				<span class="back-to-top-text">Back to Top</span>
+			</a>
+		</div>
+	</main>
 </body>
 
 </html>

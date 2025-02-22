@@ -1,0 +1,271 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* System font stack for better performance */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #0e0e10; /* Deep Black Background */
+  color: rgba(245, 245, 245, 0.9); /* Light Gray Text */
+  line-height: 1.6;
+  padding-bottom: 3rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+main {
+  padding: 0 1.2rem 0 1.2rem;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background: #1a1a1d; */
+  background: #1a1a1d; /* Charcoal Black */
+  color: rgba(245, 245, 245, 0.9);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.navbar .logo {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: #e4e6eb;
+}
+
+/* Hamburger Menu Toggle */
+#menuToggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  background: #e4e6eb;
+  border-radius: 2px;
+  display: block;
+  height: 3px;
+  margin: 4px;
+  width: 25px;
+  transition: all 0.3s ease;
+}
+
+/* Navbar Links - Desktop View */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  align-items: left;
+}
+
+.nav-links li a {
+  color: #e4e6eb;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  margin-top: 200px;
+}
+
+.nav-links li a:hover {
+  color: #2a9d8f; /* Teal Accent on Hover */
+}
+
+/* Responsive Menu for Mobile */
+/* Responsive Menu for Mobile */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 50px;
+    right: -100%;
+    width: 65%;
+    height: 100vh;
+    background: #1a1a1d;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5rem 2rem;
+    transition: right 0.3s ease-in-out;
+    z-index: 1001; /* Higher than overlay */
+  }
+
+  #menuToggle:checked ~ .nav-links {
+    right: 0;
+  }
+
+  .nav-links li a {
+    font-size: 1.2rem;
+    z-index: 1002; /* Ensure it's above overlay */
+    margin-right: 50;
+  }
+
+  .nav-links li a:active {
+    color: #2a9d8f;
+  }
+
+  /* Invisible Overlay for Closing Menu */
+  .overlay {
+    display: none;
+  }
+
+  #menuToggle:checked ~ .overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    z-index: 1000; /* Behind the menu */
+    pointer-events: auto;
+  }
+}
+
+/* Headings */
+h2 {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  color: #bffaf1;
+}
+
+/* Section Styling */
+section {
+  max-width: 800px;
+  margin: 1.5rem auto;
+  background: #1a1a1d; /* Section Background */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-8px);
+}
+
+/* Section Titles */
+section i h4 {
+  margin-bottom: 1rem;
+  color: #bffaf1;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* Links, Paragraphs, and Details */
+p,
+a,
+details {
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin: 0.75rem 0;
+}
+
+a {
+  color: #2a9d8f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #2a9d8f;
+}
+
+/* Details */
+summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #07a089;
+}
+
+details[open] summary {
+  color: #07a089;
+}
+
+/* Back to Top Button */
+a[href="#top"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #2a9d8f;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+a[href="#top"] img {
+  margin-right: 0.5rem;
+}
+
+a[href="#top"]:hover {
+  background: #1f7568;
+  transform: translateY(-2px);
+}
+
+/* Assignments Section */
+#assignment1,
+#assignment2,
+#assignment3 {
+  margin-top: 2rem;
+}
+
+#assignment1 h2,
+#assignment2 h2,
+#assignment3 h2 {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #2a9d8f;
+}
+
+/* Center the Back-to-Top Button */
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+/* Back to Top Button Styles */
+#backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between image and text */
+  padding: 0.5rem 1rem;
+  background: #2a9d8f;
+  color: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Image Styling */
+.back-to-top-img {
+  width: 30px;
+  height: 30px;
+}
+
+/* Text Styling */
+.back-to-top-text {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Hover Effects */
+#backToTop:hover {
+  background: #1f7568;
+  transform: translateY(-2px);
+}
