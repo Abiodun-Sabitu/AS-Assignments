@@ -1,0 +1,54 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #0e0e10;
+  color: #e4e6eb;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height for sticky footer */
+}
+
+/* Enlarged Table Styles */
+table {
+  width: 90%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background: #1a1a1d;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden; /* Rounded corners */
+}
+
+th,
+td {
+  border: 1px solid #2a9d8f;
+  padding: 20px;
+  text-align: center;
+}
+
+th {
+  background: #2a9d8f;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* Hover Effect on Table Rows */
+tr:hover {
+  background-color: rgba(42, 157, 143, 0.15);
+  transition: background-color 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  table {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+  }
+}

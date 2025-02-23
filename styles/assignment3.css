@@ -1,0 +1,85 @@
+* Main Content */ main {
+  flex: 1;
+  padding: 2rem;
+}
+
+h2 {
+  margin: 1.5rem 0;
+  font-size: 2rem;
+  color: #bffaf1;
+}
+
+p {
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: rgba(245, 245, 245, 0.8);
+}
+
+/* Media Sections */
+.media-section {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 800px;
+  background: #1a1a1d;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.media-section h3 {
+  margin-bottom: 1rem;
+  color: #2a9d8f;
+}
+
+/* Responsive Picture */
+picture img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Video, Audio, and Iframe Styling */
+video,
+audio,
+iframe {
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+/* SVG Icon */
+svg {
+  margin-top: 1rem;
+  width: 100px;
+  height: 100px;
+  transition: transform 0.3s ease-in-out;
+}
+
+svg:hover {
+  transform: scale(1.1);
+}
+/* Responsive Video Container */
+.responsive-video {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.responsive-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; /* Centers horizontally and vertically */
+
+  height: 100%;
+  border: 0;
+  border-radius: 12px;
+
+  pointer-events: auto;
+}

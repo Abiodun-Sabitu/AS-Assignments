@@ -6,13 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Alt School Profile</title>
 	<!-- Linking the CSS file -->
+	<link rel="stylesheet" href="./styles/navbar.css" />
 	<link rel="stylesheet" href="./styles/assignment1.css" />
+	<link rel="stylesheet" href="./styles/footer.css" />
 </head>
 
 <body id="top">
 	<!-- Stylish Navbar -->
 	<nav class="navbar">
-		<div class="logo">Alt School Africa</div>
+		<div class="logo">SOE Assignments</div>
 
 		<!-- Hamburger Menu Toggle (Checkbox) -->
 		<input type="checkbox" id="menuToggle" />
@@ -24,16 +26,17 @@
 
 		<!--  Navigation Links -->
 		<ul class="nav-links">
-			<li><a href="#assignment1" onclick="document.getElementById('menuToggle').checked = false;">Assignment 1</a></li>
-			<li><a href="#assignment2" onclick="document.getElementById('menuToggle').checked = false;">Assignment 2</a></li>
-			<li><a href="#assignment3" onclick="document.getElementById('menuToggle').checked = false;">Assignment 3</a></li>
+			<li><a href="#assignment1">Assignment 1</a></li>
+			<li><a href="./assignment2.html">Assignment 2</a>
+			</li>
+			<li><a href="./assignment3.html">Assignment 3</a></li>
 		</ul>
 
 		<!-- Invisible overlay to close the menu -->
 		<label for="menuToggle" class="overlay"></label>
 	</nav>
 	<main>
-		<h2>My Alt School Profile</h2>
+		<h2>My AltSchool Profile</h2>
 
 		<!-- Basic Info Section -->
 		<section>
@@ -99,17 +102,28 @@
 		<!-- Assignments Section -->
 		<section id="assignment1">
 			<h2>Assignment 1</h2>
-			<p>Details about Assignment 1 go here...</p>
+			<p>Create a web page that should display your basic information, with ALT SCHOOL ID, a biography, relevant details
+				explaining why you joined the program, and your goals for the School of Engineering program. Implement a
+				fragment
+				identifier feature to enable scrolling back to the top of the page. Create a folder and name the file
+				index.html.</p>
 		</section>
 
 		<section id="assignment2">
 			<h2>Assignment 2</h2>
-			<p>Details about Assignment 2 go here...</p>
+			<p>Build additional two web pages , the first is going to be a table about all the courses and schools existing at
+				AltSchool Africa, with School of engineering we have frontend engineering, backend engineering, cloud
+				engineering and
+				cybersecurity. School of Product – Product Design, Marketing, Management. School of Data – Data Analysis,
+				Science,
+				Engineering.</p>
 		</section>
 
 		<section id="assignment3">
 			<h2>Assignment 3</h2>
-			<p>Details about Assignment 3 go here...</p>
+			<p>Assignment 3 is a page where you use all the media element existing in html to create powerful message about
+				yourself.
+				Specially use picture element with more that 3 sources with responsiveness for mobile, tablet and laptop.</p>
 		</section>
 
 		<!--  Back to Top Button -->
@@ -120,6 +134,9 @@
 			</a>
 		</div>
 	</main>
+	<footer>
+		<p>© 2025 Abiodun Sabitu | <a href="assignment3.html">Go to Media Page</a></p>
+	</footer>
 </body>
 
 </html>

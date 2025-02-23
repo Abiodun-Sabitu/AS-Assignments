@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Media Showcase</title>
+	<link rel="stylesheet" href="./styles/navbar.css">
+	<link rel="stylesheet" href="./styles/assignment1.css">
+	<link rel="stylesheet" href="./styles/assignment2.css">
+	<link rel="stylesheet" href="./styles/assignment3.css">
+	<link rel="stylesheet" href="./styles/footer.css" />
+</head>
+
+<body>
+	<!-- Consistent Navbar (Same as Assignments 1 & 2) -->
+	<nav class="navbar">
+		<div class="logo">SOE Assignments</div>
+
+		<!-- Hamburger Menu Toggle (Checkbox) -->
+		<input type="checkbox" id="menuToggle" />
+		<label for="menuToggle" class="menu-icon">
+			<span></span>
+			<span></span>
+			<span></span>
+		</label>
+
+		<!--  Navigation Links -->
+		<ul class="nav-links">
+			<li><a href="./index.html">Assignment 1</a></li>
+			<li><a href="./assignment2.html">Assignment 2</a>
+			</li>
+			<li><a href="./assignment3.html">Assignment 3</a></li>
+		</ul>
+
+		<!-- Invisible overlay to close the menu -->
+		<label for="menuToggle" class="overlay"></label>
+	</nav>
+
+	<!-- Introduction Section -->
+	<main>
+		<h2>Media Showcase</h2>
+		<p>This page features various media elements to give you an idea of my journey and aspirations.</p>
+
+		<!-- Responsive Image with <picture> -->
+		<section class="media-section">
+			<h3>Responsive Image </h3>
+			<picture>
+				<source srcset="./assets/dev-laptop-desktop.jpg" media="(min-width: 1024px)">
+				<source srcset="./assets/dev-laptop-tablet.jpg" media="(min-width: 768px)">
+				<source srcset="./assets/dev-laptop-mobile.jpg" media="(max-width: 767px)">
+				<img src="./assets/profile-desktop.jpg" alt="A responsive photo of myself">
+			</picture>
+		</section>
+
+		<section class="media-section">
+			<h3>Personal Introduction Video</h3>
+			<div class="responsive-video">
+				<video controls>
+					<source
+						src="https://res.cloudinary.com/dp3zvgynv/video/upload/v1740306720/How_To_Introduce_Yourself_as_a_Software_Engineer__Tell_Me_About_Yourself_1_dvrk4u.webm"
+						type="video/webm">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+		</section>
+
+
+		<!--  Audio Element -->
+		<section class="media-section">
+			<h3>Inspiring Audio</h3>
+			<audio controls>
+				<source
+					src="https://res.cloudinary.com/dp3zvgynv/video/upload/v1740307884/Failure_is_NOT_the_END_-_Powerful_Motivational_Video_TubeRipper.com_gslkwj.webm"
+					type="audio/webm">
+				Your browser does not support the audio element.
+			</audio>
+		</section>
+
+		<!-- Embedded YouTube Video -->
+		<section class="media-section">
+			<h3>My Favorite YouTube Video</h3>
+			<div class="responsive-video">
+				<iframe src="https://www.youtube.com/embed/TLKxdTmk-zc"
+					title="How To Introduce Yourself as a Software Engineer: Tell Me About Yourself!" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+				</iframe>
+			</div>
+		</section>
+
+
+
+		<!-- Custom SVG Icon -->
+		<section class="media-section">
+			<h3>My special SVG</h3>
+			<svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#2a9d8f" stroke-width="2"
+				stroke-linecap="round" stroke-linejfoin="round">
+				<path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+				<path d="M2 17l10 5 10-5"></path>
+				<path d="M2 12l10 5 10-5"></path>
+			</svg>
+		</section>
+	</main>
+
+	<footer>
+		<p>© 2025 Abiodun Sabitu | <a href="assignment3.html">Go to Media Page</a></p>
+	</footer>
+</body>
+
+</html>
